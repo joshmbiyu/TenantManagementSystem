@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("EMAIL", email)
             startActivity(intent)
             finish()
         }
@@ -43,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
         binding.helpTextView.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strathmore.edu"))
             startActivity(intent)
+            finish()
         }
     }
 }
